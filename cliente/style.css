@@ -1,10 +1,20 @@
-html{
-  position: relative;
-}
-
 #a{
   border: 3px outset chocolate;
-  color:chocolate;
+  color:orange;
+  font-size: medium;
+  font-weight: 900;
+}
+
+#b{
+  border: 3px outset chocolate;
+  color: blue;
+  font-size: medium;
+  font-weight: 900;
+}
+
+#c{
+  border: 3px outset chocolate;
+  color:green;
   font-size: medium;
   font-weight: 900;
 }
