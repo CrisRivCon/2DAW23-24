@@ -8,11 +8,11 @@
 <body>
     <div>
         <h1>Ficha de Cliente</h1>
-        <p>Nombre: <?php echo $_GET['nombre']?></p>
-        <p>DNI: <?php echo $_GET['dni']?></p>
-        <p>Apellidos: <?php echo $_GET['apellidos']?></p>
-        <p>Dirección: <?php echo $_GET['direccion']?></p>
-        <p>Teléfono: <?php echo $_GET['telefono']?></p>
+        <p>Nombre: <?php echo $_POST['nombre']?></p>
+        <p>DNI: <?php echo $_POST['dni']?></p>
+        <p>Apellidos: <?php echo $_POST['apellidos']?></p>
+        <p>Dirección: <?php echo $_POST['direccion']?></p>
+        <p>Teléfono: <?php echo $_POST['telefono']?></p>
     </div>
 </body>
 </html>
