@@ -1,0 +1,20 @@
+div, button{
+  margin: 5px;
+  padding: 5px
+}
+
+button{
+  background-color: black;
+  color: bisque;
+  font-weight: bold;
+}
+.buttons {
+  height: fit-content;
+}
+.buttons > div {
+  float: left;
+}
+
+.text {
+  display: inline;
+}

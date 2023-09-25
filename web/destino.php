@@ -6,8 +6,13 @@
     <title>Respuesta</title>
 </head>
 <body>
-    <?php
-    echo $_GET['dni'];
-    ?>
+    <div>
+        <h1>Ficha de Cliente</h1>
+        <p>Nombre: <?php echo $_GET['nombre']?></p>
+        <p>DNI: <?php echo $_GET['dni']?></p>
+        <p>Apellidos: <?php echo $_GET['apellidos']?></p>
+        <p>Dirección: <?php echo $_GET['direccion']?></p>
+        <p>Teléfono: <?php echo $_GET['telefono']?></p>
+    </div>
 </body>
 </html>
