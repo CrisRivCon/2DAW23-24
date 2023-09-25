@@ -1,5 +1,6 @@
 function showPrompt(){
-    // Introduce texto por el prompt y añade con innerHTML.
+    // Introduce texto por el prompt, añade con innerHTML al documento y 
+    // convierte en entero si lo que se introduce es un número.
 
     text = prompt("Escribe un número:");
     if (text.match( /^[0-9]+$/)) {
@@ -9,37 +10,37 @@ function showPrompt(){
     }
 }
 
-document.getElementById("prompt").addEventListener("click", showPrompt);
 
 function showAlert() {
     // Muestra una alerta con el texto "Hola"
-
     alert("Hola!");
 }
 
-document.getElementById("alert").addEventListener("click", showAlert);
 
 function showConsole() {
     // Muestra por consola el texto "Hola!"
-
     console.log("Hola!");
 }
 
-document.getElementById("console").addEventListener("click", showConsole);
 
 
 function rewrite() {
-    document.write("<h1>Se ha borrado todo por el método document.write()</h1>");
+    // Se utiliza el método write para crear texto
+    document.write("<h1>Se ha incluido texto con el método document.write()</h1>");
 }
 
-document.getElementById("write").addEventListener("click", rewrite);;
 
 function showConfirm() {
-    
-
+    // Aparece una ventana de confirmación
     confirm("Ventana de confirmación");
 }
 
+
+
+document.getElementById("prompt").addEventListener("click", showPrompt);
+document.getElementById("alert").addEventListener("click", showAlert);
+document.getElementById("console").addEventListener("click", showConsole);
+document.getElementById("write").addEventListener("click", rewrite);;
 document.getElementById("confirm").addEventListener("click", showConfirm);
 
 
