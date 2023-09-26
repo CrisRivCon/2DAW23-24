@@ -11,23 +11,36 @@
     <?php
     $errores = [];
 
-    $op1 = $_GET['op1'];
-
-    if(!is_numeric($op1)){
-        $errores[] = 'El primer operando es incorrecto.';
+    if (isset($_GET['op1'])){
+        $op1 = $_GET['op1'];        
+        
+        if(!is_numeric($op1)){
+            $errores[] = 'El primer operando es incorrecto.';
+        }
+    }else{
+        $errores[] = 'Falta el primer operando.';
     }
 
-    $op2 = $_GET['op2'];
-
-    if(!is_numeric($op2)){
-        $errores[] = 'El segundo operando es incorrecto.';
+    if (isset($_GET['op2'])){
+        $op2 = $_GET['op2'];        
+        
+        if(!is_numeric($op2)){
+            $errores[] = 'El segundo operando es incorrecto.';
+        }
+    }else{
+        $errores[] = 'Falta el segundo operando.';
     }
 
-    $op = $_GET['op'];
-    $operadores = ['+', '-', '*', '/'];
-    if (!in_array($op, $operadores)){
-        $errores[] = 'El operador es incorrecto.';
+    if (isset($_GET['op'])){
+        $op = $_GET['op'];        
+        
+        if(!in_array($op, ['+', '-', '*', '/'])){
+            $errores[] = 'La operación es incorrecta.';
+        }
+    }else{
+        $errores[] = 'Falta la operación.';
     }
+
 
     if(empty($errores)):
         switch ($op):
@@ -45,15 +58,17 @@
                 break;
             endswitch;
             ?>
-            El resultado es <?= $res ?>
-        <?php else: ?>
 
-            <?php for ($i=0; $i < count($errores); $i++) ?>
-               <?= $errores[$i] ?>
-            
-            <?php endfor ?>
+            El resultado es <?= $res ?>
+
+    <?php else: ?>
+
+        <ul>
+        <?php foreach ($errores as $error): ?>
+            <li><?= $error ?></li>
+            <?php endforeach ?>
+        </ul>
     <?php endif ?>
-    El resultado es <?= $res ?>
 </body>
 
 </html>
