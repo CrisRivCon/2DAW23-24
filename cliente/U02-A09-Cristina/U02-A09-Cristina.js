@@ -12,8 +12,5 @@ function multiplos8(){
         }
         min ++;
     }
-
-
-
     document.getElementById('res').innerHTML = "Los múltiplos de 8 son" + multi;
 }
