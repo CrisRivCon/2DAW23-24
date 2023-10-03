@@ -10,27 +10,27 @@ function mostrarPantalla(res, texto){
 }
 
 function traductor(){
-    let palabra = prompt("Introduce la palabra a traducir:")
+    let palabra = prompt("Introduce la palabra a traducir:");
     var res = document.getElementById("resultado");
-    switch (palabra) {
+    switch (palabra.toLocaleLowerCase()) {
         case "casa":
-            mostrarPantalla(res, "house")
+            mostrarPantalla(res, "house");
             break;
 
         case "mesa":
-            mostrarPantalla(res, "table")
+            mostrarPantalla(res, "table");
             break;
 
         case "perro":
-            mostrarPantalla(res, "dog")
+            mostrarPantalla(res, "dog");
             break;
 
         case "gato":
-            mostrarPantalla(res, "gato")
+            mostrarPantalla(res, "cat");
             break;
 
         default:
-            mostrarPantalla(res, "Palabra no válida.")
+            mostrarPantalla(res, "Palabra no válida.");
             break;
     }
 }

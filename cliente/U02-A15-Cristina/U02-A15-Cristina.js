@@ -1,5 +1,5 @@
 function descomponerFrase(){
-    let frase = prompt("Introduce la frase a descomponer.")
+    let frase = prompt("Introduce la frase a descomponer.");
     let res = document.getElementById("resultado");
     while(res.hasChildNodes()){
         res.removeChild(res.firstChild);
