@@ -1,12 +1,12 @@
 var res = document.getElementById("resultado");
 var boton = document.getElementById("boton");
-var input = document.getElementById("fib");
+var input = document.getElementById("geo");
 
-function fibonacci(){
-    var acc = [1, 1];
+function geometrica(){
+    var acc = [5];
     let n = input.value;
-    for (i = 0; i < n - 2; i++){
-        acc.push(acc[i] + acc[i + 1]);
+    for (i = 0; i < n - 1; i++){
+        acc.push(acc[i] * 3);
     }
     mostrarResultado(acc);  
 }
@@ -21,4 +21,4 @@ function mostrarResultado(resultado){
     document.getElementById("resultado").append(p);
 }
 
-boton.addEventListener("click", fibonacci);
+boton.addEventListener("click", geometrica);
