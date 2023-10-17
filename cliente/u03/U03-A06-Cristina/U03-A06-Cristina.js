@@ -65,12 +65,24 @@ Object.entries(ZONAS).forEach(([key, values]) => {
 
 function calcularHora(){
     let fecha = new Date();
-
     let valor = select.options[select.selectedIndex].value;
-    fecha.setHours(fecha.getHours() + valor);
+    
+    fecha.setHours(fecha.getUTCHours() + Number(valor));
+
     let hora = fecha.getHours();
     let min = fecha.getMinutes();
     let seg = fecha.getSeconds()
+
+    if (hora.toString().length <= 1){
+        hora = '0' + hora;
+    }
+    if (min.toString().length <= 1){
+        min = '0' + min;
+    }
+
+    if (seg.toString().length <= 1){
+        seg = '0' + seg;
+    }
     resultado.textContent = `Son las ${hora}:${min}:${seg}`;
 }
 mostrarZonas(ZONAS);
