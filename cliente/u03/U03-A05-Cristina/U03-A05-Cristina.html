@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U03-A05-Cristina</title>
+    <style>
+        #resultado{
+            display: grid;
+            grid-template-columns: 30px 10px 30px 10px 30px;
+            grid-template-rows: 30px 30px;
+            justify-content: center;
+        }
+        #hora{
+            grid-column: 1;
+        }
+        #minutos{
+            grid-column: 3;
+        }
+        #segundos{
+            grid-column: 5;
+        }
+        #indicador{
+            grid-column: 3;
+            grid-row: 2;
+        }
+        #resultado > div{
+            align-self: center;
+            border: 2px solid black;
+            background-color: rgb(166, 172, 170);
+            font-weight: bold;
+            justify-self: center;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <p>Crear un reloj que se muestre en la página web, 
+        el reloj implementado mostrará la hora en formato de 12 horas e indicará si es AM o PM</p>
+    <br>
+    <div id="resultado">
+        <div id="hora">&nbsp;&nbsp;</div>
+        <div>:</div>
+        <div id="minutos">&nbsp;&nbsp;</div>
+        <div>:</div>
+        <div id="segundos">&nbsp;&nbsp;</div>
+        <div id="indicador">&nbsp;&nbsp;</div>
+    </div>
+    <script src="U03-A05-Cristina.js"></script>
+</body>
+</html>
