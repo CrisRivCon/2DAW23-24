@@ -14,7 +14,6 @@ function calculadora(e) {
     if (!isNaN(id)) {
         pantalla.value = valor + id;
     }
-    console.log(id);
     switch (id) {
         case "punto":
             pantalla.value = valor + ".";
@@ -32,22 +31,32 @@ function calculadora(e) {
             pantalla.value = valor + "/";
             break;
         case "raiz":
-            pantalla.value = valor + '&#8730;';
+            pantalla.value = Math.sqrt(valor);
             break;
-        case "suma":
-            pantalla.value = valor + "+";
+        case "log":
+            pantalla.value = Math.log(valor);
             break;
-        case "resta":
-            pantalla.value = valor + "-";
+        case "pi":
+            pantalla.value = valor + Math.PI;
             break;
-        case "multiplicar":
-            pantalla.value = valor + "*";
+        case "raizcubi":
+            pantalla.value = Math.pow(valor, 3);
             break;
-        case "dividir":
-            pantalla.value = valor + "/";
+        case "sin":
+            pantalla.value = Math.sin(valor);
+            break;
+        case "cos":
+            pantalla.value = Math.cos(valor);
+            break;
+        case "tan":
+            pantalla.value = Math.tan(valor);
+            break;
+        case "raizcua":
+            pantalla.value = Math.pow(valor, 2);
             break;
         case "c":
-            pantalla.value = null;
+            let long = valor.length;
+            pantalla.value = valor.slice(0, long - 1) ;
             break;
         case "del":
             pantalla.value = null;
