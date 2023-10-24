@@ -12,3 +12,30 @@ background: red;
 :is(input, textarea):valid {
 background: green;
 }
+
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid
+  #888;
+  padding: 10px;
+  }
+  tfoot td {
+  background:
+  #666;
+  color: #eee;
+  border: 0;
+  }
+div {
+  display: inline-block;
+}
+  table {
+  caption-side:
+  bottom;
+  }
+  tr.title th {
+  background: #000;
+  color: #fff;
+  border: 0;
+  }
