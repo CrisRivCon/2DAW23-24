@@ -8,21 +8,17 @@ function analizarFrase(){
     while (resultado.hasChildNodes()) {
         resultado.removeChild(resultado.firstChild);
     }
-    let frase = input.value.trim();
+    frase = frase.value;
     let palabras = frase.split(" ");
-    let numPalabras = palabras.length;
+    console.log(palabras);
 
     let p = document.createElement("p");
     p.textContent =  `La primera palabra es "${palabras[0]}".`;
     resultado.append(p);
 
     let p1 = document.createElement("p");
-    p1.textContent =  `La última palabra es "${palabras[numPalabras - 1]}".`;
+    p1.textContent =  `La primera palabra es "${palabras[0]}".`;
     resultado.append(p1);
-
-    let p3 = document.createElement("p");
-    p3.textContent =  `El número de palabras es ${numPalabras}".`;
-    resultado.append(p3);
 
 }
 
