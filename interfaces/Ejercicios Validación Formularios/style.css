@@ -1,0 +1,19 @@
+.contenedor {
+  display: grid;
+  row-gap: 5px;
+  grid-template-columns: 200px;
+  grid-template-rows: repeat(14, 25px);
+  justify-content: center;
+}
+
+.b-sub {
+  grid-row-start: 14;
+}
+
+:is(input):invalid {
+  border: 2px solid red;
+}
+
+:is(input):valid {
+  border: 2px solid green;
+}
