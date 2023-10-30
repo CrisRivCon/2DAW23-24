@@ -1,9 +1,9 @@
 var boton = document.getElementById("boton");
 var resultado = document.getElementById("resultado");
-var input = document.getElementById("hora");
+var input = document.getElementById("input");
 
 
-function validarHora(){
+function validarMatricula(){
     while (resultado.hasChildNodes()) {
         resultado.removeChild(resultado.firstChild);
     }
@@ -11,7 +11,7 @@ function validarHora(){
     let hora = input.value.trim();
     let res = '';
 
-    let patron = /^(([0-1][0-9])|(2[0-3])):([0-5][0-9])(:([0-5][0-9]))?$/;
+    let patron = /^\d{4}\s[A-Z]{3}$/;
     let found = patron.test(hora);
 
     if (patron.test(hora)){
@@ -28,4 +28,4 @@ function validarHora(){
     resultado.append(p);
 }
 
-boton.addEventListener("click", validarHora);
+boton.addEventListener("click", validarMatricula);
