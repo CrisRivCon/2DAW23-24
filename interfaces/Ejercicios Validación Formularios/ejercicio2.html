@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <form action="" method="get">
+            <fieldset class="contenedor">
+                <legend>Ejercicio 2</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" pattern="^((\w+)\s(\w+))(\s(\w+)){0,2}$" placeholder="Nombre y apellidos" autofocus required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" pattern="^((.+)\@(.+)\.[a-z]+)$" placeholder="xxxxxx@yyyyy.zzz" required>
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input type="text" name="fecha_nacimiento" id="fecha_nacimiento" pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/yyyy" required>
+                <label for="web">Web:</label>
+                <input type="text" name="web" id="web" pattern="^(https?:\/\/(w{3})\..+\..+)$" placeholder="http://www.xxxx.yyy" required>
+                <button type="submit" class="b-sub">Enviar</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
