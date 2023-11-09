@@ -1,28 +1,116 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
+
+/* ______________________Header_____________________*/
+
 header {
   background-color: black;
 }
 
+.logo {
+  height: 43px;
+}
+
+h1 {
+  color: white;
+  font-weight: lighter;
+  font-size: 2.3em;
+}
+
 .w-80 {
   width: 80%;
-
+  min-width: 528px;
 }
 
-.w-50 {
-  width: 50%;
+/* ________________________Nav______________________ */
+
+nav div {
+  width: 303px;
 }
 
-.py-10 {
+.nav {
+  height: 54px;
+}
+
+.nav ul li {
+  list-style: none;
+  float: left;
+  font-size: x-small;
+  margin-left: 14px;
+  margin-right: 14px;
+  letter-spacing: 0.1em;
+}
+
+.nav a {
+  color: black;
+  padding-bottom: 3px;
+}
+
+.select {
+  border-bottom: 3px solid red;
+  padding-left: 2px;
+}
+
+.shadow-b {
+  box-shadow: 0 2px 2px lightgray;
+}
+
+/* _______________________________Cuerpo_______________________________ */
+h2 {
+  font-size: 1.7em;
+  margin-top: 27px;
+  margin-bottom: 14px;
+}
+
+.mx-100 {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.title {
+  min-width: 669.3px;
+  max-width: 669.3px;
+}
+
+h2 + p {
+  font-size: 0.7em;
+  margin-bottom: 10px;
+}
+
+.border-y-grey {
+  border-bottom: 2.7px solid rgb(218, 215, 215);
+  border-top: 2.7px solid rgb(218, 215, 215);
+  font-size: 0.88em;
+  letter-spacing: 0em;
+  max-width: 609.3px;
+  text-align: justify;
+  line-height: 1.5em;
+}
+/* _______________________________Generales_______________________________ */
+
+.w-90 {
+  width: 90%;
+}
+
+.py-20 {
   padding-bottom: 20px;
   padding-top: 20px;
 }
 
-.px-10 {
+.p-10 {
+  padding: 10px;
+}
+
+.pt-5 {
+  padding-top: 5px;
+}
+
+.px-20 {
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -31,18 +119,11 @@ header {
   margin: auto;
 }
 
-h1 {
-  color: white;
-  font-weight: lighter;
+
+.text-red {
+  color: red;
 }
 
-.logo {
-  height: 50px;
-}
-
-.nav ul li{
-  list-style: none;
-  float: left;
-  font-size: x-small;
-  letter-spacing: 0.1em;
+.serif {
+  font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
 }
