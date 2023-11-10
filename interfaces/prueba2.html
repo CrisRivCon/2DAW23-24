@@ -5,90 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prueba2</title>
     <style>
-      
-      /* body { background-image: url("https://bit.ly/2slA7jo");}
-body { background-image: url("https://bit.ly/2slA7jo"); background-repeat: repeat-x;}
-/*body { background-image: url("https://bit.ly/2slA7jo"); background-repeat: repeat-y;} 
-/*body { background-image: url("https://bit.ly/2slA7jo"); background-repeat: no-repeat;}
-/*body { background-image: url("https://bit.ly/2slA7jo"); background-repeat: repeat;}*/
-      body {
-        background-image: url("https://bit.ly/2slA7jo");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center center; 
+      .tooltip-container {
+        position: relative;
+        display: inline-block;
+        margin-top: 50px;
+      }
+      .tooltip-text {
+        visibility: hidden;
+        width: 120px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: -400%; /* Posiciona el tooltip encima
+del elemento */
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .tooltip-container:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
       }
     </style>
   </head>
   <body>
-    <p class="a">Rojo con su nombre</p>
-    <p class="b">Rojo con Hexadecimal</p>
-    <p class="c">Rojo con RGB</p>
-    <p class="d">Rojo con HSL</p>
-    <p class="e">Texto con opacidad 0.5</p>
-    <p class="f">Fondo con opacidad 0.5</p>
-    <p class="g">Fondo transparente</p>
-    <p class="a">Rojo con su nombre</p>
-    <p class="b">Rojo con Hexadecimal</p>
-    <p class="c">Rojo con RGB</p>
-    <p class="d">Rojo con HSL</p>
-    <p class="e">Texto con opacidad 0.5</p>
-    <p class="f">Fondo con opacidad 0.5</p>
-    <p class="g">Fondo transparente</p>
-    <p class="a">Rojo con su nombre</p>
-    <p class="b">Rojo con Hexadecimal</p>
-    <p class="c">Rojo con RGB</p>
-    <p class="d">Rojo con HSL</p>
-    <p class="e">Texto con opacidad 0.5</p>
-    <p class="f">Fondo con opacidad 0.5</p>
-    <p class="g">Fondo transparente</p>
-    <p class="a">Rojo con su nombre</p>
-    <p class="b">Rojo con Hexadecimal</p>
-    <p class="c">Rojo con RGB</p>
-    <p class="d">Rojo con HSL</p>
-    <p class="e">Texto con opacidad 0.5</p>
-    <p class="f">Fondo con opacidad 0.5</p>
-    <p class="g">Fondo transparente</p>
-    <p class="a">Rojo con su nombre</p>
-    <p class="b">Rojo con Hexadecimal</p>
-    <p class="c">Rojo con RGB</p>
-    <p class="d">Rojo con HSL</p>
-    <p class="e">Texto con opacidad 0.5</p>
-    <p class="f">Fondo con opacidad 0.5</p>
-    <p class="g">Fondo transparente</p>
-    <p class="a">Rojo con su nombre</p>
-    <p class="b">Rojo con Hexadecimal</p>
-    <p class="c">Rojo con RGB</p>
-    <p class="d">Rojo con HSL</p>
-    <p class="e">Texto con opacidad 0.5</p>
-    <p class="f">Fondo con opacidad 0.5</p>
-    <p class="g">Fondo transparente</p>
-    <p class="a">Rojo con su nombre</p>
-    <p class="b">Rojo con Hexadecimal</p>
-    <p class="c">Rojo con RGB</p>
-    <p class="d">Rojo con HSL</p>
-    <p class="e">Texto con opacidad 0.5</p>
-    <p class="f">Fondo con opacidad 0.5</p>
-    <p class="g">Fondo transparente</p>
-    <p class="a">Rojo con su nombre</p>
-    <p class="b">Rojo con Hexadecimal</p>
-    <p class="c">Rojo con RGB</p>
-    <p class="d">Rojo con HSL</p>
-    <p class="e">Texto con opacidad 0.5</p>
-    <p class="f">Fondo con opacidad 0.5</p>
-    <p class="g">Fondo transparente</p>
-    <p class="a">Rojo con su nombre</p>
-    <p class="b">Rojo con Hexadecimal</p>
-    <p class="c">Rojo con RGB</p>
-    <p class="d">Rojo con HSL</p>
-    <p class="e">Texto con opacidad 0.5</p>
-    <p class="f">Fondo con opacidad 0.5</p>
-    <p class="g">Fondo transparente</p>
-    <p class="a">Rojo con su nombre</p>
-    <p class="b">Rojo con Hexadecimal</p>
-    <p class="c">Rojo con RGB</p>
-    <p class="d">Rojo con HSL</p>
-    <p class="e">Texto con opacidad 0.5</p>
-    <p class="f">Fondo con opacidad 0.5</p>
-    <p class="g">Fondo transparente</p>
+    <div class="tooltip-container">
+      <span class="tooltip-text">Este es un tooltip</span>
+      Mi elemento
+    </div>
   </body>
 </html>

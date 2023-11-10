@@ -1,9 +1,45 @@
+/* _______________________________Generales_______________________________ */
+
 * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   text-decoration: none;
+  color: #222222;
+}
+
+body {
+  background-color: #EEEEEE;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.width-75 {
+  width: 75%;
+}
+
+.px-20 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+a {
+  color: #CC0000;
+}
+
+a:hover {
+  color: #222222;
+}
+
+.serif {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* ______________________Header_____________________*/
@@ -12,19 +48,21 @@ header {
   background-color: black;
 }
 
+header div {
+  min-width: 528px;
+  padding-top: 5px;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
 .logo {
   height: 43px;
 }
 
 h1 {
-  color: white;
+  color: #ffffff;
   font-weight: lighter;
   font-size: 2.3em;
-}
-
-.w-80 {
-  width: 80%;
-  min-width: 528px;
 }
 
 /* ________________________Nav______________________ */
@@ -33,26 +71,32 @@ nav div {
   width: 303px;
 }
 
-.nav {
-  height: 54px;
+nav {
+  height: 60px;
 }
 
-.nav ul li {
+nav ul li {
   list-style: none;
   float: left;
   font-size: x-small;
   margin-left: 14px;
+  margin-top: 22px;
   margin-right: 14px;
   letter-spacing: 0.1em;
 }
 
-.nav a {
-  color: black;
+nav a {
+  color: #222222;
+  padding-bottom: 3px;
+}
+
+nav a:hover {
+  color: #CC0000;
   padding-bottom: 3px;
 }
 
 .select {
-  border-bottom: 3px solid red;
+  border-bottom: 2px solid #CC0000;
   padding-left: 2px;
 }
 
@@ -67,63 +111,22 @@ h2 {
   margin-bottom: 14px;
 }
 
-.mx-100 {
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-.title {
-  min-width: 669.3px;
-  max-width: 669.3px;
-}
-
 h2 + p {
-  font-size: 0.7em;
+  font-size: 0.8em;
   margin-bottom: 10px;
 }
 
 .border-y-grey {
-  border-bottom: 2.7px solid rgb(218, 215, 215);
-  border-top: 2.7px solid rgb(218, 215, 215);
+  border-bottom: 2.7px solid #DDDDDD;
+  border-top: 2.7px solid #DDDDDD;
   font-size: 0.88em;
   letter-spacing: 0em;
-  max-width: 609.3px;
   text-align: justify;
   line-height: 1.5em;
-}
-/* _______________________________Generales_______________________________ */
-
-.w-90 {
-  width: 90%;
+  width: 70%;
 }
 
-.py-20 {
-  padding-bottom: 20px;
-  padding-top: 20px;
+article img {
+  width: 60%;
 }
 
-.p-10 {
-  padding: 10px;
-}
-
-.pt-5 {
-  padding-top: 5px;
-}
-
-.px-20 {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.m-auto {
-  margin: auto;
-}
-
-
-.text-red {
-  color: red;
-}
-
-.serif {
-  font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-}
