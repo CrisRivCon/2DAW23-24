@@ -35,7 +35,7 @@ function ordenaAscendente(impares) {
 
 function ordenaDescendente(impares) {
 
-    return impares.slice().sort(function (a, b) { b - a });
+    return impares.slice().sort((a, b) =>  b - a );
 }
 
 function escribir(res) {
