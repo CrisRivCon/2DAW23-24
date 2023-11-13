@@ -16,9 +16,15 @@
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" pattern="^((.+)\@(.+)\.[a-z]+)$" placeholder="xxxxxx@yyyyy.zzz" required>
                 <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-                <input type="text" name="fecha_nacimiento" id="fecha_nacimiento" pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/yyyy" required>
+                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/yyyy" required>
                 <label for="web">Web:</label>
-                <input type="text" name="web" id="web" pattern="^(https?:\/\/(w{3})\..+\..+)$" placeholder="http://www.xxxx.yyy" required>
+                <input type="url" name="web" id="web" pattern="^(https?:\/\/(w{3})\..+\..+)$" placeholder="http://www.xxxx.yyy" required>
+                <label for=""></label>
+                <input type="time" name="" id="">
+                <label for=""></label>
+                <input type="datetime">
+                <label for=""></label>
+                <input type="month">
                 <button type="submit" class="b-sub">Enviar</button>
             </fieldset>
         </form>
