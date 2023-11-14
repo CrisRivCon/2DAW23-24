@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+a, button, label {
+  font-family: 'Oswald', sans-serif;
+}
+
+.enlace-3 {
+  color: #000000;
+}
+
+.boton-colabora {
+  background-color: #cb6370;
+  border-radius: 20px;
+  height: 50px;
+  padding-top: 12px;
+  text-align: center;
+  width: 150px;
+  transition-duration: 3s;
+  transition-property: box-shadow;
+  color: #FFFFFF;
+}
+.boton-colabora:hover {
+  box-shadow: 2px 2px 3px #555962;
+  
+}
+.boton-colabora:active {
+  box-shadow: -1px -3px 1px #cb6370 inset;
+}
+
+/*______________________________Header_____________________________*/
+nav {
+  border: 1px solid #93C01F;
+  border-radius: 10PX;
+  height: 72px;
+  margin: auto;
+  margin-top: 2%;
+  width: 80%;
+}
+nav div {
+  display: inline-block;
+  height: 100%;
+}
+nav > div:first-child {
+  width: 10%;
+}
+nav > div:nth-child(2) {
+  width: 70%;
+}
+nav > div:last-child {
+  width: 19%;
+}
+
+nav .logo {
+  margin-left: 40%;
+  height: 72px;
+}
+nav ul {
+  height: 100%;
+  margin: auto;
+  width: 40%;
+}
+nav li {
+  float: left;
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: #000000;
+}
