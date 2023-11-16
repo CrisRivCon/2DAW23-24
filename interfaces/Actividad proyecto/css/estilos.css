@@ -4,11 +4,17 @@
   padding: 0;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Bebas Neue', sans-serif;
 }
 
-a, button, label {
+a,
+p,
+button,
+label {
   font-family: 'Oswald', sans-serif;
 }
 
@@ -27,51 +33,123 @@ a, button, label {
   transition-property: box-shadow;
   color: #FFFFFF;
 }
+
 .boton-colabora:hover {
   box-shadow: 2px 2px 3px #555962;
-  
+
 }
+
 .boton-colabora:active {
   box-shadow: -1px -3px 1px #cb6370 inset;
 }
 
 /*______________________________Header_____________________________*/
 nav {
+  background-color: #FFFFFF;
   border: 1px solid #93C01F;
   border-radius: 10PX;
+  box-shadow: 2px 3px 3px #555962;
   height: 72px;
   margin: auto;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 2%;
+  min-width: 900px;
+  position: fixed;
   width: 80%;
+  z-index: 1;
 }
-nav div {
-  display: inline-block;
+
+nav > div {
+  float: left;
   height: 100%;
 }
-nav > div:first-child {
-  width: 10%;
+
+nav>div:first-child {
+  width: 20%;
 }
-nav > div:nth-child(2) {
-  width: 70%;
+
+nav>div:nth-child(2) {
+  width: 61%;
 }
-nav > div:last-child {
+
+nav>div:last-child {
+  min-width: 170px;
+  padding-top: 11px;
+  text-align: right;
   width: 19%;
 }
 
 nav .logo {
-  margin-left: 40%;
+  margin-left: 15%;
   height: 72px;
 }
+
 nav ul {
   height: 100%;
   margin: auto;
-  width: 40%;
+  min-width: 477px;
+  width: 73%;
 }
+
 nav li {
   float: left;
   list-style: none;
+  margin-top: 28px;
+  margin-left: 15%;
 }
+nav li:first-child {
+  margin-left: 0;
+}
+
 nav a {
   text-decoration: none;
   color: #000000;
+}
+
+.select {
+  text-decoration: underline;
+}
+
+.boton-nav {
+  margin: auto;
+  margin-right: 15%;
+}
+
+
+/*______________________________Sección 1_____________________________*/
+.seccion-1 {
+  height: 800px;
+  width: 100%;
+}
+
+.fondo-seccion-1 {
+  background-image: url('../img/_MA_5308.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 650px;
+  position: absolute;
+  width: 100%;
+}
+
+.cubre-fotos {
+  background-color: #000000;
+  height: 650px;
+  position: absolute;
+  opacity: 0.7;
+  width: 100%;
+}
+
+.seccion-1 h1 {
+  color: #FFFFFF;
+  position: relative;
+  top: 40%;
+  left: 10%;
+}
+
+.seccion-1 p {
+  color: #FFFFFF;
+  left: 10%;
+  position: relative;
+  top: 42%;
 }
