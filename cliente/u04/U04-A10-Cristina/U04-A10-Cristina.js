@@ -36,21 +36,38 @@ Vehiculo.prototype.frenar = frenar;
 let vehiculo1 = new Vehiculo('honda', 'nose', 'rojo', 2023);
 let vehiculo2 = new Vehiculo('ford', 'focus', 'gris', 2022);
 
-
 function escribir(res, contenedor = respuesta) {
-    let p = document.createElement('p');
-    p.textContent = res;
-    contenedor.append(p);
+    contenedor.append(res);
 }
 
-escribir('4. ' + vehiculo1.marca);
-escribir('5. ' + vehiculo2['color']);
+let vehiculos = [vehiculo1, vehiculo2];
 
-let propiedades = []
-for (let propiedad in vehiculo1) {
-    propiedades.push(propiedad);
+function crearTabla(objetos) {
+    let tabla = document.createElement('table');
+    let trh = document.createElement('thead');
+
+    objetos.forEach(element => {
+        let tr = document.createElement('tr');
+
+        for (propiedad in element) {
+            if (typeof element[propiedad] === 'function' ) {
+                continue;
+            }
+            if (element == vehiculos[0]) {
+                let th = document.createElement('th');
+                th.textContent = propiedad.toUpperCase();
+                trh.append(th);
+            }
+                let td = document.createElement('td');
+                td.textContent = element[propiedad];
+                tr.append(td);
+        }
+
+        tabla.append(tr);
+    });
+
+    tabla.append(trh);
+    return tabla;
 }
 
-escribir('11. For in: ' + propiedades); 
-escribir('Object.getOwnPropertyNames: ' + Object.getOwnPropertyNames(vehiculo1)); 
-escribir('Object.keys: ' + Object.keys(vehiculo1)); 
+escribir(crearTabla(vehiculos));
