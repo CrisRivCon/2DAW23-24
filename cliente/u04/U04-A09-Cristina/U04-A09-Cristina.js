@@ -7,7 +7,9 @@ function Vehiculo(marca, modelo, color, anioFabricacion, cilindrada) {
     this.anioFabricacion = anioFabricacion;
     this.mostrarDatos = mostrarDatos;
     this.acelerar = acelerar;
-    this.arrancar = arrancar;
+    this.arrancar = function () {
+        return `El coche de marca ${this.marca}, modelo ${this.modelo}, de color ${this.color} ha arrancado.`;
+    }
 }
 
 function mostrarDatos() {
@@ -18,15 +20,11 @@ function mostrarDatos() {
 }
 
 function acelerar(velocidad) {
-    escribir('El coche ha acelerado a ' + velocidad + 'km/h.');
-}
-
-function arrancar() {
-    escribir(`El coche de marca ${this.marca}, modelo ${this.modelo}, de color ${this.color} ha arrancado.`);
+    return 'El coche ha acelerado a ' + velocidad + 'km/h.';
 }
 
 function frenar() {
-    escribir(`El coche de marca ${this.marca}, modelo ${this.modelo}, color ${this.color} ha frenado.`);
+    return `El coche de marca ${this.marca}, modelo ${this.modelo}, color ${this.color} ha frenado.`;
 
 }
 
@@ -45,6 +43,12 @@ function escribir(res, contenedor = respuesta) {
 
 escribir('4. ' + vehiculo1.marca);
 escribir('5. ' + vehiculo2['color']);
+escribir('6. ');
+vehiculo2.mostrarDatos();
+escribir('7. ' + vehiculo1.acelerar(10));
+escribir('8. ' + vehiculo1.arrancar());
+escribir('10. ' + vehiculo1.frenar());
+
 
 let propiedades = []
 for (let propiedad in vehiculo1) {
