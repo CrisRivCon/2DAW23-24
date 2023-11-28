@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Repositorio de publicaciones digitales de acceso abierto de la comunidad Universitat Oberta de Catalunya.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Universitat Oberta de Catalunya, repositorio de publicaciones digitales</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="/img/Logo_blau_uoc.png" alt="Logotipo de la Universitat Oberta de Catalunya">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="http://openaccess.uoc.edu/webapps/o2/?locale=es">Buscar</a></li>
+                    <li ><a class="select" href="paginas/publicar.html">Publicar</a></li>
+                </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>O2: depositar un documento</h1>
+        <form>
+        <fieldset>
+            <legend>Datos de la publicación</legend>
+                <label>Nombre del autor</label>
+                <input type="text"  required pattern="[a-zA-Z]{2,64}">
+
+                <label">Primer apellido del autor</label>
+                <input type="text" required pattern="[a-zA-Z]{2,64}">
+
+                <label">Segundo apellidoo del autor</label>
+                <input type="text" required pattern="[a-zA-Z]{2,64}">
+                
+                <label">Título del documento</label>
+                <input type="text" required pattern="[a-zA-Z]{2,64}">
+                <label">Fecha de creación</label>
+                <input type="date" required>
+
+                <label>Editorial</label>
+                <input type="radio" name="editorial" id="editorial" required>
+                <label name="editorial" readonly>Universitat Oberta de Catalunya</label>
+                <br>
+                <label>Tipo de documento</label>
+                <input type="radio" name="tipo-documento" id="tipo-documento1" required>
+                <label for="tipo-documento1" name="tipo-documento">Artículo</label>
+                <input type="radio" name="tipo-documento" id="tipo-documento2" required>
+                <label for="tipo-documento2" name="tipo-documento">Trabajo find e carrera</label>
+                <input type="radio" name="tipo-documento" id="tipo-documento3" required>
+                <label for="tipo-documento3" name="tipo-documento">Trabajo fin de master</label>
+                <input type="radio" name="tipo-documento" id="tipo-documento4" required>
+                <label for="tipo-documento4" name="tipo-documento">Tesis doctoral</label>
+                <br>
+                <label name="idioma">Idioma del documento</label>
+                <input type="radio" name="idioma" id="idioma1" required>
+                <label for="idioma1" name="idioma">Castellano</label>
+                <input type="radio" name="idioma" id="idioma2" required>
+                <label for="idioma2" name="idioma">Catalán</label>
+                <input type="radio" name="idioma" id="idioma3" required>
+                <label for="idioma3" name="idioma">Inglés</label>
+                <input type="radio" name="idioma" id="idioma4" required>
+                <label for="idioma4" name="idioma">Otro</label>
+                <br>
+                <label>Documento</label>
+                <input type="file" id="documento" required>
+            </fieldset>
+            <fieldset>
+                <legend>Datos de contacto del remitente</legend>
+                <label>Nombre y apellidos</label>
+                <input type="text"  required pattern="[a-zA-Z]{2,128}">
+
+                <label>Sexo</label>
+                <input type="radio" name="sexo1">
+                <label for="sexo1" >Hombre</label>
+                <input type="radio" name="sexo2">
+                <label for="sexo2">Mujer</label>
+
+                <label>Tipo documento de identidad</label>
+                <input type="radio" name="tipo1" required>
+                <label for="tipo1" >NIF</label>
+                <input type="radio" name="tipo2" required>
+                <label for="tipo2">NIE</label>
+                <input type="radio" name="tipo3" required>
+                <label for="tipo3">PASS</label>
+
+                <label for="documento-identidad">Número de documento</label>
+                <input type="text" id="documento-identidad">
+                <label for="email">Email</label>
+                <input type="email" name="" id="" required>
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="" id="">
+
+                <label for="idioma-respuesta">Idioma para la respuesta</label>
+                <input type="radio" name="idioma-respuesta" required>
+                <label for="idioma-respuesta">Castellano</label>
+                <input type="radio" name="idioma-respuesta" required>
+                <label for="idioma-respuesta">Catalán</label>
+
+            </fieldset>
+
+            <label for="privacidad">He leído y acepto la polítia de privavcidad y el aviso legal*</label>
+            <input type="checkbox" name="privacidad" id="privacidad" required>
+
+            <label for="informa">Dese ser informado sobre las nuevas incorporaciones al repositorio</label>
+            <input type="checkbox" name="informa" id="informa">
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <p>Actividad realizada por Cristina Rivera Contioso, para la asignatura HTML y CSS</p>
+        <p>Primer trimestre del curso 2023-2024</p>
+    </footer>    
+</body>
+</html>

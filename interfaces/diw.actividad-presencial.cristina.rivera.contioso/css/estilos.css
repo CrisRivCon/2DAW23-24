@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000078;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+nav, .seccion-1, .seccion-2, .seccion-3 {
+  width: 60%;
+  margin: 10px auto 20px auto;
+}
+
+/* -------------------- Header ------------------- */
+
+header {
+  height: 100px;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-content: end;
+  width: 220px;
+}
+nav li {
+  padding-top: 10px;
+  list-style: none;
+}
+
+
+.select {
+  border-bottom: 2px solid #FFE000;
+}
+
+nav img {
+  height: 40px;
+}
+
+/* -------------------- Sección 1 ------------------- */
+main {
+  width: 100%;
+}
+
+.seccion-1 {
+  display: grid;
+  grid-template-columns: 40% 10% 50%;
+  min-width: 950px;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+.texto {
+  display: grid;
+  align-content: space-between;
+  height: 100%;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+iframe {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  justify-self: end;
+}
+
+.seccion-1 a {
+  text-align: center;
+  display: inline-block;
+  width: fit-content;
+  font-weight: lighter;
+}
+
+.boton {
+  background-color: #FFE000;
+  border-radius: 5px;
+  padding-top: 15px;
+  height: 50px;
+  width: 200px;
+}
+
+/* -------------------- Sección 2 ------------------- */
+
+.seccion-2 {
+  background-color: #F0F0F0;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 40% 60%;
+  grid-template-columns: 33% 33% 33%;
+  margin: 50px 0 50px 0;
+  height: 300px;
+  width: 100%;
+}
+
+.seccion-2 h2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.seccion-2 div {
+  display: flex;
+  flex-direction: column;
+}
+
+.seccion-2 span {
+  font-weight: bold;
+  text-align: center;
+}
+
+.seccion-2 span:first-child {
+  font-size: 1.5em;
+}
+
+/* -------------------- Sección 3 ------------------- */
+
+.seccion-3 {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 400px;
+}
+
+.seccion-3 h2 {
+  align-self: center;
+}
+
+.seccion-3 div{
+  height: 80px;
+  padding: 30px 0 30px 30px ;
+  box-shadow: 2px 2px 2px #D0D0D0;
+  min-width: 600px;
+}
+
+/* -------------------- Footer ------------------- */
+
+footer {
+  background-color: #D0D0D0;
+  padding-top: 30px;
+  height: 150px;
+  text-align: center;
+  border-top: 2px solid #73EDFF;
+}
+
+footer p {
+  font-size: 1em;
+}
+
+/* -------------------- Últimos envíos ------------------- */
+
+.envios {
+  text-align: center;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+tr {
+  height: 100px;
+}
+
+table, td{
+  border-top: 2px solid #000078;
+
+}
+
+td {
+  width: 200px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #D0D0D0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #F0F0F0;
+}
+
+/* -------------------- Publicar ------------------- */
+
+:is(input):valid{
+  border-color: greenyellow;
+}
+
+:is(input):invalid {
+  border-color: red;
+}
