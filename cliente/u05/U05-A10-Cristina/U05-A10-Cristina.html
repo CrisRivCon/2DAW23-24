@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U05-A10-Cristina</title>
+</head>
+<body>
+    <h2>10. Modifica el formulario anterior, siendo el día preferente el día que haya marcado como
+        disponible. Si marca varios, que coja el último.</h2>
+
+    <form method="POST" id="formulario"
+        action="mailto:cristina@cristina.com?subject=Formulario" 
+        enctype="text/plain">
+
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Introduce tu nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+            <br><br>
+
+            <label for="mensaje">Mensaje:</label>
+            <br>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+            
+        </fieldset><br>
+
+        <label for="color" name="color">Elige un color:</label> <br>
+        <input type="radio" name="color" id="rojo" value="rojo">
+        <label for="color">Rojo</label> <br>
+        <input type="radio" name="color" id="verde" value="rojo">
+        <label for="color">Verde</label><br>
+        <input type="radio" name="color" id="azul" value="azul">
+        <label for="color">Azul</label><br><br>
+    
+        <label for="asignatura">Selecciona una asignatura:</label>
+        <select name="asignatura" id="asignatura">
+            <option value="matematicas">Matematicas</option>
+            <option value="lengua">Lengua</option>
+            <option value="literatura">Literatura</option>
+            <option value="historia">Historia</option>
+        </select>
+        <br><br>
+        
+        <label for="dias">Selecciona los días con disponibilidad:</label> <br>
+        <input type="checkbox" name="dias" class="dias" value="lunes">
+        <label for="dias">Lunes</label> <br>
+        <input type="checkbox" name="dias" class="dias" value="martes">
+        <label for="dias">Martes</label><br>
+        <input type="checkbox" name="dias" class="dias" value="miercoles">
+        <label for="dias">Miércoles</label><br>
+        <input type="checkbox" name="dias" class="dias" value="jueves">
+        <label for="dias">Jueves</label><br>
+        <input type="checkbox" name="dias" class="dias" value="viernes">
+        <label for="dias">Viernes</label><br><br>
+        
+        <label for="preferente">Selecciona el día preferente:</label>
+        <select id="preferente" disabled>
+            <option value="lunes">Lunes</option>
+            <option value="martes">Martes</option>
+            <option value="miercoles">Miercoles</option>
+            <option value="jueves">Jueves</option>
+            <option value="viernes">Viernes</option>
+        </select>
+        <input type="text" name="preferente" id="preferente-hidden" hidden>
+        <br>
+        <br>
+        <input type="submit" id="submit" value="Haz clic para enviar información">
+        <input type="reset" value="Comenzar a rellenar de nuevo">
+        <input type="button" name="google" id="google" value="Haz clic sobre mi">
+    </form>
+
+    <script src="U05-A10-Cristina.js"></script>
+</body>
+</html>
