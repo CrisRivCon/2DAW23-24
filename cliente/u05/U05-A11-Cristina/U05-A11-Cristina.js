@@ -42,3 +42,16 @@ function seleccionarUltimo(dias) {
 
 //Actividad 11
 
+let color = document.querySelectorAll('.color');
+
+for (i = 0; i < color.length; i++) {
+    color[i].addEventListener('change', cambioFondo);
+}
+
+function cambioFondo(e) {
+    let colorClase = e.target.id;
+    let body = document.getElementsByTagName('body')[0];
+    body.removeAttribute('class');
+    body.classList.add(colorClase);
+}
+
