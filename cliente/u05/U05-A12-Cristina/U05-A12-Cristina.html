@@ -36,19 +36,19 @@
 <body>
     <form action="" class="formulario" id="formulario">
         <label for="dni">DNI:</label>
-        <input type="text" pattern="^\d{2}\.\d{3}\.\d{3}-\w$" name="dni" id="dni">
+        <input type="text" pattern="^\d{2}\.\d{3}\.\d{3}-\w$" name="dni" id="dni" required>
         <label for="nombre">Nombre:</label>
-        <input type="text" pattern="^(((\w|[À-ÿ])+)\s((\w|[À-ÿ])+))(\s((\w|[À-ÿ])+)){0,2}$" name="nombre" id="nombre">
+        <input type="text" pattern="^(((\w|[À-ÿ])+)\s((\w|[À-ÿ])+))(\s((\w|[À-ÿ])+)){0,2}$" name="nombre" id="nombre" required>
         <label for="fecha">F. Nac.:</label>
-        <input type="date" pattern="\d{2}/\d{2}/\d{4}" name="fecha" id="fecha">
+        <input type="date" pattern="\d{2}/\d{2}/\d{4}" name="fecha" id="fecha" required>
         <label for="email">E-mail:</label>
-        <input type="email" pattern="^((.+)@(.+)\.[a-z]+)$" name="email" id="email">
+        <input type="email" pattern="^((.+)@(.+)\.[a-z]+)$" name="email" id="email" required>
         <label for="web">P. Web:</label>
-        <input type="text" pattern="^(https?:\/\/(w{3})\..+\..+)$" name="web" id="web">
+        <input type="text" pattern="^(https?:\/\/(w{3})\..+\..+)$" name="web" id="web" required>
         <label for="contra">Contraseña:</label>
-        <input type="password" name="contra" id="contra">
+        <input type="password" name="contra" id="contra" required>
         <label for="confirm">Confirmar contraseña:</label>
-        <input type="password" name="confirm" id="confirm">
+        <input type="password" name="confirm" id="confirm" required>
         <input class="boton" type="submit" value="GUARDAR">
         <input class="boton" type="button" value="VER">
         
