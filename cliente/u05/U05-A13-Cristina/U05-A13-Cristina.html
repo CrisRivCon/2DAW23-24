@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U05-A13-Cristina</title>
+    <style>
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            flex-flow: column;
+            width: 20vw;
+            padding: 5px;
+            height: 60vh;
+            min-width: 200px;
+        }
+        .formulario label{
+            margin-top: 5px;
+        }
+        .formulario input {
+            margin: 5px 0 10px 0;
+        }
+        .boton {
+            width: 100px;
+            align-self: center;
+        }
+        input:valid {
+            border: 1px solid green;
+        }
+
+        input:invalid {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="formulario" id="formulario">
+        <label for="dni">DNI:</label>
+        <input type="text" pattern="^\d{2}\.\d{3}\.\d{3}-\w$" title="Formato válido: 99.999.999-X" name="dni" id="dni" required>
+        <label for="nombre">Nombre:</label>
+        <input type="text" 
+            pattern="^(((\w|[À-ÿ])+)\s((\w|[À-ÿ])+))(\s((\w|[À-ÿ])+)){0,2}$" 
+            title="Introduzca nombre y apellidos. Max: 2 nombres y 2 apellidos." 
+            name="nombre" id="nombre" required>
+        <label for="fecha">F. Nac.:</label>
+        <input type="date" pattern="[1-3][0-9]/[0-1][0-9]/\d{4}" name="fecha" id="fecha" required>
+        <label for="email">E-mail:</label>
+        <input type="email" pattern="^((.+)@(.+)\.[a-z]+)$" name="email" id="email" required>
+        <label for="web">P. Web:</label>
+        <input type="text" pattern="^(https?:\/\/(w{3})\..+\..+)$" name="web" id="web" required>
+        <label for="contra">Contraseña:</label>
+        <input type="password" pattern="^\w{8,10}$" name="contra" id="contra" required>
+        <label for="confirm">Confirmar contraseña:</label>
+        <input type="password" pattern="^\w{8,10}$" name="confirm" id="confirm" required>
+        <input class="boton" type="submit" value="GUARDAR" id="submit">
+        <input class="boton" type="button" value="VER">
+        
+    </form>
+    <script src="U05-A13-Cristina.js"></script>
+</body>
+</html>

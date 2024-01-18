@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U05-A16-Cristina</title>
+    <style>
+        form {
+            width: 40vw;
+            margin-bottom: 20px;
+        }
+        .barra {
+            width: 100px;
+            height: 20px;
+            background-color: aqua;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="formulario">
+        <label for="votos">¿Qué sistema operativo móvil te gusta más?</label> <br>
+        <input type="radio" name="votos" class="votos" id="iOS" value="iOS">
+        <label for="votos">iOs</label><br>
+        <input type="radio" name="votos" class="votos" id="android" value="android">
+        <label for="votos">Android</label><br>
+        <input type="radio" name="votos" class="votos" id="windows" value="windows">
+        <label for="votos">Windows Phone</label><br>
+        <input type="radio" name="votos" class="votos" id="otro" value="otro">
+        <label for="votos">otro</label><br>
+
+        <button type="button" id="votar">Votar!</button>
+    </form>
+    <div class="grafico" id="grafico">
+        <div class="barras">
+            <div class="barra"></div>
+            iOS
+        </div>
+        <div class="barras">
+            <div class="barra"></div>
+            Android
+        </div>
+        <div class="barras">
+            <div class="barra"></div>
+            Windows Phone
+        </div>
+        <div class="barras">
+            <div class="barra"></div>
+            Otros
+        </div>
+    </div>
+    <script src="U05-A16-Cristina.js"></script>
+</body>
+</html>
