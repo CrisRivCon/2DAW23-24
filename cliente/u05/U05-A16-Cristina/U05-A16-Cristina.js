@@ -13,24 +13,16 @@ function guardarCookie() {
 
     } else {
 
-        let cuki = document.cookie;
+        let cukis = document.cookie;
         let valor = seleccionado.value;
-        let regex = new RegExp(`${valor}=[0-9]{1,3};?`, 'igm');
-        console.log(regex);
-        console.log(regex.test('android=1; windows=1; otro=1'));
-        if (cuki.includes(seleccionado.value)) { // Si ya incluye el valor, le suma 1
+        let regex = new RegExp(`${valor}=[0-9]{1,3}`, 'ig');
+        if (cukis.includes(seleccionado.value)) { // Si ya incluye el valor, le suma 1
             
-            cukiSeparada = cuki.split(';');
-            
-            cukiSeparada.forEach(cukis => {
-                valorese = cukis.split('=');
-                console.log(valorese);
-                if (valorese[0].trim() == seleccionado.value) {
-                    let nuevoValor = Number(valorese[1]) + 1;
-                    console.log('nuevo' + nuevoValor);
-                    document.cookie = cuki.replace(regex, `${valor}=${nuevoValor};`); 
-                }
-            });
+            cukiSeparada = cukis.split(';');
+            let cuki = cukis.match(regex);
+            let claveValor = cuki[0].split('=');
+            document.cookie = claveValor[0] + '=' + (Number(claveValor[1]) + 1);
+
 
         } else { // si no existe, lo añade.
             document.cookie = `${seleccionado.value}=1;`
