@@ -12,7 +12,7 @@
         .barra {
             width: 100px;
             height: 20px;
-            background-color: aqua;
+            background-color: #ffffff;
             display: inline-block;
         }
     </style>
@@ -20,32 +20,32 @@
 <body>
     <form action="" id="formulario">
         <label for="votos">¿Qué sistema operativo móvil te gusta más?</label> <br>
-        <input type="radio" name="votos" class="votos" id="iOS" value="iOS">
+        <input type="radio" name="votos" class="votos" value="ios">
         <label for="votos">iOs</label><br>
-        <input type="radio" name="votos" class="votos" id="android" value="android">
+        <input type="radio" name="votos" class="votos" value="android">
         <label for="votos">Android</label><br>
-        <input type="radio" name="votos" class="votos" id="windows" value="windows">
+        <input type="radio" name="votos" class="votos" value="windows">
         <label for="votos">Windows Phone</label><br>
-        <input type="radio" name="votos" class="votos" id="otro" value="otro">
+        <input type="radio" name="votos" class="votos" value="otros">
         <label for="votos">otro</label><br>
 
         <button type="button" id="votar">Votar!</button>
     </form>
     <div class="grafico" id="grafico">
         <div class="barras">
-            <div class="barra"></div>
+            <progress class="barra" id="ios" max="50" value="0"></progress>
             iOS
         </div>
         <div class="barras">
-            <div class="barra"></div>
+            <progress class="barra" id="android" max="50" value="0"></progress>
             Android
         </div>
         <div class="barras">
-            <div class="barra"></div>
+            <progress class="barra" id="windows" max="50" value="0"></progress>
             Windows Phone
         </div>
         <div class="barras">
-            <div class="barra"></div>
+            <progress class="barra" id="otros" max="50" value="0"></progress>
             Otros
         </div>
     </div>

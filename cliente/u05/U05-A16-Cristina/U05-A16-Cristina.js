@@ -1,34 +1,54 @@
 let submit = document.getElementById('votar');
 let formulario = document.getElementById('formulario');
 
+
 submit.addEventListener('click', guardarCookie);
+window.addEventListener('load', actualizarGrafico);
 
 function guardarCookie() {
     let seleccionado = document.querySelector('.votos:checked');
+    let cukis = document.cookie;
+    let valorInput = seleccionado.value;
+    
+    if (!cukis) { //Si no existe, la crea.
 
-    if (!document.cookie) { //Si no existe, la crea.
-
-        console.log('no existe');
         document.cookie = `${seleccionado.value}=1;`;
 
-    } else {
+    } else { // Si existe, la modifica
 
-        let cukis = document.cookie;
-        let valor = seleccionado.value;
-        let regex = new RegExp(`${valor}=[0-9]{1,3}`, 'ig');
-        if (cukis.includes(seleccionado.value)) { // Si ya incluye el valor, le suma 1
-            
-            cukiSeparada = cukis.split(';');
+        if (cukis.includes(seleccionado.value)) {
+            let regex = new RegExp(`${valorInput}=[0-9]{1,3}`, 'ig');
             let cuki = cukis.match(regex);
             let claveValor = cuki[0].split('=');
-            document.cookie = claveValor[0] + '=' + (Number(claveValor[1]) + 1);
-
+            let votos = Number(claveValor[1]) + 1
+            document.cookie = claveValor[0] + '=' + votos;
 
         } else { // si no existe, lo añade.
+
             document.cookie = `${seleccionado.value}=1;`
         }
     }
 
-    console.log(document.cookie);
+    actualizarGrafico();
+}
+
+function actualizarGrafico() {
+    let barras = document.querySelectorAll('.barra');
+    let cukis = document.cookie;
+
+    if (!document.cookie) {
+        return;
+    }
+
+    barras.forEach(barra => {
+        let regex = new RegExp(`${barra.id}=[0-9]{1,3}`, 'ig');    
+        let cuki = cukis.match(regex);
+
+        if (cuki != null) {
+            let claveValor = cuki[0].split('=');
+            let votos = claveValor[1];
+            barra.value = votos;
+        }
+    });
 
 }
