@@ -7,6 +7,7 @@ document.addEventListener('mouseup', volverImagen);
 imagen.ondragstart = function() {
     return false;
 }
+
 function cambiarImagen() {
     imagen.src = 'gato(3).png';
     imagen.addEventListener('mousemove', moverImagen);
@@ -27,10 +28,3 @@ function moverImagen(e) {
 
 
 
-
-const cambiar = document.getElementById('cambiar');
-const input = document.getElementById('img');
-cambiar.addEventListener('click', cambiarImg);
-function cambiarImg() {
-    console.log(input.value);
-}
