@@ -18,3 +18,10 @@ function moverImagen(e) {
     imagen.style.top = e.clientY - (imagen.clientHeight / 2) + 'px';
     imagen.style.left = e.clientX - (imagen.clientWidth / 2) + 'px';
 }
+
+const cambiar = document.getElementById('cambiar');
+const input = document.getElementById('img');
+cambiar.addEventListener('click', cambiarImg);
+function cambiarImg() {
+    console.log(input.value);
+}

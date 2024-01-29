@@ -2,25 +2,32 @@ const texto = document.getElementById('texto');
 const contenedor = document.getElementById('contenedor');
 const aniadir = document.getElementById('aniadir');
 const mostrarTabla = document.getElementById('mostrar-tabla');
-const cabecera = ['Alumno', 'Módulo 1', 'Módulo 2', 'Módulo 3'];
-let alumnos = [];
+let coches = [];
+
+
+function Coche(marca, modelo, color, fabricacion)  {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.color = color;
+    this.fabricacion = fabricacion;
+}
+
 
 
 aniadir.addEventListener('click', () => {
     let valor = texto.value;
 
-    crearAlumno(valor);
+    crearCoche(valor);
 });
-
 mostrarTabla.addEventListener('click', crearTabla);
 
-function crearAlumno(valor) {
-    if (alumnos.length < 5) {
+function crearCoche(valor) {
+    if (coches.length < 5) {
         let valores = valor.split(',');
         let coche =  new Coche(...valores);
         coches.push(coche);
     } else {
-        crearTabla();
+        alert('Máximo de 5 coches alcanzados.')
     }
 }
 
@@ -35,7 +42,7 @@ function crearTabla(texto) {
 
     claves.forEach(clave => {
         let th = document.createElement('th');
-
+        
         let textoCabe = document.createTextNode(clave);
         th.appendChild(textoCabe);
         thead.appendChild(th);
