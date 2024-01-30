@@ -31,24 +31,31 @@ function guardarCookie() {
 
     actualizarGrafico();
 }
+function getValueCookie(nombre) {
+    const regex = new RegExp(`${nombre}=.*;?`, 'ig');
+    let match = document.cookie.split(';').find((ele) => ele.match(regex));
+    let valor = decodeURIComponent(match).split('=');
+    return valor[1];
+}
 
 function actualizarGrafico() {
     let barras = document.querySelectorAll('.barra');
-    let cukis = document.cookie;
-
+    let valorTotal = 0;
     if (!document.cookie) {
         return;
     }
 
     barras.forEach(barra => {
-        let regex = new RegExp(`${barra.id}=[0-9]{1,3}`, 'ig');    
-        let cuki = cukis.match(regex);
+        let cuki = getValueCookie(barra.id);
 
         if (cuki != null) {
-            let claveValor = cuki[0].split('=');
-            let votos = claveValor[1];
-            barra.value = votos;
+            barra.value = cuki;
+            valorTotal = Number(valorTotal) + Number(cuki);
         }
+        
     });
-
+    
+    barras.forEach(barra => {
+        barra.max = valorTotal;
+    });
 }

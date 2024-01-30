@@ -42,10 +42,10 @@ document.cookie = 'valor3=hola; samesite = lax';
  * @returns {string}
  */
 function getValueCookie(nombre) {
-    const regex = new RegExp(`${nombre}=.*;?`);
-    let match = document.cookie.match(regex);
-    let valor = decodeURIComponent(match[0]).replace(';', '').split('=')[1];
-    return valor;
+    const regex = new RegExp(`${nombre}=.*;?`, 'ig');
+    let match = document.cookie.split(';').find((ele) => ele.match(regex));
+    let valor = decodeURIComponent(match).split('=');
+    return valor[1];
 }
 
 /**
