@@ -62,6 +62,7 @@ function setCookie(nombre, valor, expires, path = '/') {
     let fecha = new Date(Date.now() + (expires * 24 * 60 * 60));
     document.cookie = cuki + ';expires=' + fecha.toUTCString() + '; samesite = lax';
 }
+
 setCookie('valor6', 'soy una nueva cuki', 30);
 
 function borrarCuki(nombre) {

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="act11.js" defer></script>
+    <style>
+        form {
+            width: 40vw;
+            margin-bottom: 20px;
+        }
+        .barra {
+            width: 100px;
+            height: 20px;
+            background-color: #ffffff;
+            display: inline-block;
+        }
+    </style>
+    <title>Act11 Examen</title>
+</head>
+<body>
+    <form action="" id="formulario">
+        <label for="votos">¿Qué tipo de cafe te gusta más?</label> <br>
+        <input type="radio" name="votos" class="votos" value="solo">
+        <label for="votos">Café solo</label><br>
+        <input type="radio" name="votos" class="votos" value="con_leche">
+        <label for="votos">Café con leche</label><br>
+        <input type="radio" name="votos" class="votos" value="descafeinado">
+        <label for="votos">Café descafeinado</label><br>
+        <input type="radio" name="votos" class="votos" value="hielo">
+        <label for="votos">Café solo con hielo</label><br>
+
+        <button type="button" id="votar">Votar!</button>
+    </form>
+    <div class="grafico" id="grafico">
+        <div class="barras">
+            <progress class="barra" id="solo" max="0" value="0"></progress>
+            Café solo
+        </div>
+        <div class="barras">
+            <progress class="barra" id="con_leche" max="0" value="0"></progress>
+            Café con leche
+        </div>
+        <div class="barras">
+            <progress class="barra" id="descafeinado" max="0" value="0"></progress>
+            Café descafeinado
+        </div>
+        <div class="barras">
+            <progress class="barra" id="hielo" max="0" value="0"></progress>
+            Café solo con hielo
+        </div>
+    </div>
+    <div id="contenedor">
+
+    </div>
+</body>
+</html>

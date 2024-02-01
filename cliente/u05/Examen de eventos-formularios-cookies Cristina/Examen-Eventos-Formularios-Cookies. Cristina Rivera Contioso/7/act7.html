@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="act7.js" defer></script>
+    <style>
+        input:valid {
+            border: 1px solid yellowgreen;
+        }
+        input:invalid {
+            border: 1px solid red;
+        }
+    </style>
+    <title>Act7 Examen</title>
+</head>
+<body>
+    <form action="mailto:Rafael.figueroa@iesdonana.org" method="post" enctype="text/plain" id="formulario">
+        <fieldset>
+            <legend>DATOS PERSONALES DE ACCESO</legend>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" pattern="^[A-Z][a-z]+(\s[A-Z][a-z]+)?" required> <br>
+            <input type="text" name="apellido" id="apellido" placeholder="Apellido" pattern="^[A-Z][a-z]+(\s[A-Z][a-z]+)?" required> <br>
+            <input type="number" name="edad" id="edad" placeholder="edad" min="0" max="120" required> <br>
+            <input type="text" name="dni" id="dni" placeholder="DNI 99.999.999-x" pattern="^\d{2}\.\d{3}\.\d{3}-\w$" required> <br>
+            <label for="sexo">Sexo:</label>
+                <select name="sexo" id="sexo" required>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select> <br>
+            <label for="lugar_nacimiento">Lugar de Nacimiento:</label>
+            <input type="text" name="lugar_nacimiento" id="lugar_nacimiento" pattern="^[A-Z][a-z]{3,}((\s[A-Z]?[a-z]+)?){1,}" required>
+        </fieldset>
+        <button type="submit" id="guardar">GUARDAR</button>
+        <button type="button" id="ver">VER</button>
+    </form>
+</body>
+</html>
