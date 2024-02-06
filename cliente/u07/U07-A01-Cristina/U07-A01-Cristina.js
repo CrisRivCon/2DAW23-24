@@ -1,11 +1,17 @@
 const contenedor = document.getElementById('contenedor');
 const url = "U07-A01-Cristina.json";
 
+
+// Con Fetch .then
+
 /* fetch(url)
 .then(response => response.json())
 .then(datos => mostrarDatos(datos))
 */
-trabajadores(url);
+
+// Con fetch async/await
+
+/* trabajadores(url);
 
 async function trabajadores(requestUrl) {
     const request = new Request(requestUrl);
@@ -15,7 +21,9 @@ async function trabajadores(requestUrl) {
 
     const empleados = JSON.parse(texto);
     mostrarDatos(empleados);
-}
+} */
+
+// Con XMLhttpRequest
 
 function mostrarDatos(valor) {
     console.log(valor);
