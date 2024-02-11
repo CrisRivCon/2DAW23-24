@@ -12,13 +12,18 @@ function actualizarPuntuacion(e) {
     let nombre = e.target.id;
 
     fetch(`${url}?nombre=${nombre}`)
+    .then(response => {
+        if (!response.ok) throw new Error('Error');
+        return response;
+    })
     .then(response=>response.json())
     .then(data => {
-        let porcentajes = data.porcentajes;
+        let puntuaciones = data.puntuaciones;
         progress.forEach((barra, i) => {
-            barra.value = porcentajes[i];
+            barra.value = puntuaciones[i];
             barra.max = data.total;
         })
     })
+    .catch(error => console.log(error));
 
 }
