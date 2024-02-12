@@ -13,4 +13,5 @@ function buscar($array)
 }
 
 $resultado = array_filter($datos_ciudades, 'buscar') ;
+
 echo json_encode($resultado);
