@@ -2,14 +2,19 @@ const inputs = document.getElementsByName('equipo');
 const url = 'encuesta_voto.php';
 
 const progress = document.querySelectorAll('.barra');
-
+const votar = document.getElementById('votar');
 
 inputs.forEach(input => {
     input.addEventListener('input', actualizarPuntuacion);
 });
 
+votar.addEventListener('click', actualizarPuntuacion);
+
+
 function actualizarPuntuacion(e) {
-    let nombre = e.target.id;
+    const input = document.querySelector('input:checked');
+    console.log(input);
+    let nombre = input.id;
 
     fetch(`${url}?nombre=${nombre}`)
     .then(response => {
